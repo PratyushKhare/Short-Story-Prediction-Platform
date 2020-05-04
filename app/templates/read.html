@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Fable by VIT Students</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename= 'assets/css/main.css')}}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="/">Fable <span>by VIT Students</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/">Home</a></li>
+					<li><a href="/read">Read Stories</a></li>
+					<li><a href="/write">Write Stories</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Gain Knowledge</p>
+						<h2>Read Stories</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			{% if stories|length < 1 %}
+			<h4> There are no stories now. </h4>
+			{% else %}
+		
+				{% for story in stories %}
+					<section id="two" class="wrapper style2">
+						<div class="inner">
+							<div class="box">
+								<div class="content">
+									<header class="align-center">
+										<p>{{ story.id }}</p>
+										<p>{{ story.date_created.date() }}</p>
+										<h2>{{ story.title }}</h2>
+									</header>
+									<p>{{ story.content }}</p>
+										<ul class="actions small">
+											{% if story.action > 0 %}
+												<li><a href="#" class="button special small">Action</a></li>
+											{% endif %}
+											{% if story.adv > 0 %}
+												<li><a href="#" class="button special small">Adventure</a></li>
+											{% endif %}
+											{% if story.comedy > 0 %}
+												<li><a href="#" class="button special small">Comedy</a></li>
+											{% endif %}
+											{% if story.crime > 0 %}
+												<li><a href="#" class="button special small">Crime</a></li>
+											{% endif %}
+											{% if story.doc > 0 %}
+												<li><a href="#" class="button special small">Documentary</a></li>
+											{% endif %}
+											{% if story.drama > 0 %}
+												<li><a href="#" class="button special small">Drama</a></li>
+											{% endif %}
+											{% if story.fam > 0 %}
+												<li><a href="#" class="button special small">Family</a></li>
+											{% endif %}
+											{% if story.fantasy > 0 %}
+												<li><a href="#" class="button special small">Fantasy</a></li>
+											{% endif %}
+											{% if story.history > 0 %}
+												<li><a href="#" class="button special small">History</a></li>
+											{% endif %}
+											{% if story.horror > 0 %}
+												<li><a href="#" class="button special small">Horror</a></li>
+											{% endif %}
+											{% if story.mystery > 0 %}
+												<li><a href="#" class="button special small">Mystery</a></li>
+											{% endif %}
+											{% if story.romance > 0 %}
+												<li><a href="#" class="button special small">Romance</a></li>
+											{% endif %}
+											{% if story.scifi > 0 %}
+												<li><a href="#" class="button special small">Science Fiction</a></li>
+											{% endif %}
+											{% if story.thriller > 0 %}
+												<li><a href="#" class="button special small">Thriller</a></li>
+											{% endif %}
+											{% if story.war > 0 %}
+												<li><a href="#" class="button special small">War</a></li>
+											{% endif %}
+										</ul>
+								</div>
+								<a href="/delete/{{ story.id }}" class="button small">Delete</a>
+							</div>
+						</div>
+					</section>
+				{% endfor %}
+			{% endif %}
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename= 'assets/js/jquery.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/skel.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/util.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/main.js')}}"></script>
+
+	</body>
+</html>

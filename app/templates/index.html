@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Fable by VIT Students</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename= 'assets/css/main.css')}}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="/">Fable <span>by VIT Students</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/">Home</a></li>
+					<li><a href="/read">Read Stories</a></li>
+					<li><a href="/write">Write Stories</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section class="banner full">
+				<article>
+					<img src="{{ url_for('static', filename= 'images/img001.jpg')}}" alt="" />
+					<div class="inner">
+						<header>
+							<p>An exclusive story sharing experience by<a href="/"> Us</a></p>
+							<h2>Fable</h2>
+						</header>
+					</div>
+				</article>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="{{ url_for('static', filename= 'images/read01.jpg')}}" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Discover Knowledge</p>
+										<h2>Reading</h2>
+									</header>
+									<p> “A reader lives a thousand lives before he dies . . . The man who never reads lives only one.” – George R.R. Martin<br><br> “Reading is essential for those who seek to rise above the ordinary.” – Jim Rohn</p>
+									<footer class="align-center">
+										<a href="/read" class="button alt">Read More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="{{ url_for('static', filename= 'images/write01.jpg')}}" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Explore Creativity</p>
+										<h2>Writing</h2>
+									</header>
+									<p> “Every secret of a writer’s soul, every experience of his life, every quality of his mind, is written large in his works.”— Virginia Woolf<br><br> “There is no greater agony than bearing an untold story inside you.” ― Maya Angelou</p>
+									<footer class="align-center">
+										<a href="/write" class="button alt">Write More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>A website developed by VIT Students</p>
+						<h2>Contact Us</h2>
+					</header>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename= 'assets/js/jquery.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/skel.min.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/util.js')}}"></script>
+			<script src="{{ url_for('static', filename= 'assets/js/main.js')}}"></script>
+
+	</body>
+</html>
