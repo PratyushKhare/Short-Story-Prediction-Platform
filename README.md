@@ -1,1 +1,1 @@
-# Short-Story-Prediction-Platform
+# Short-Story-Prediction-Webapp
